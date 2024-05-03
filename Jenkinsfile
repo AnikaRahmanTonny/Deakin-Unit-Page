@@ -43,6 +43,17 @@ pipeline {
             steps {
                 // Deploy the application to a production server, e.g., AWS EC2 instance
                 echo "Production Stage"
+                
+            }
+            post {
+                success {
+                    // Send email notification on successful deployment
+                    emailext (
+                        to: 'tonnyanikarahman10@gmail.com',
+                        subject: 'Deployment Successful',
+                        body: 'The deployment was successful. Please verify.'
+                    )
+                }
             }
         }
     }
