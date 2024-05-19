@@ -101,13 +101,16 @@ pipeline {
         success {
             emailext body: 'Pipeline succeeded. All stages completed successfully.',
                      subject: 'Pipeline Status: Success',
-                     to: ‘'tonnyanikarahman10@gmail.com’
+                     to: 'tonnyanikarahman10@gmail.com',
+                     attachmentsPattern: '**/*.log'
         }
         failure {
             emailext body: 'Pipeline failed. Check logs for details.',
                      subject: 'Pipeline Status: Failure',
-                     to: ‘'tonnyanikarahman10@gmail.com’
+                     to: 'tonnyanikarahman10@gmail.com',
+                     attachmentsPattern: '**/*.log'
         }
     }
 }
+
 
