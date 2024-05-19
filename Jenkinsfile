@@ -35,7 +35,7 @@ pipeline {
                     // Send email notification on test failure
                     emailext body: "Test Stage: Failure\n\nPlease find attached test logs.",
                              subject: "Pipeline Test Status: Failure",
-                             to: ''tonnyanikarahman10@gmail.com ',
+                             to: 'tonnyanikarahman10@gmail.com',
                              attachmentsPattern: "sample.log"
                 }
             }
@@ -59,14 +59,14 @@ pipeline {
                     // Send email notification on security scan success
                     emailext body: "Security Scan Stage: Success\n\nPlease find attached security scan logs.",
                              subject: "Pipeline Security Scan Status: Success",
-                             to: ''tonnyanikarahman10@gmail.com ',
+                             to: 'tonnyanikarahman10@gmail.com',
                              attachmentsPattern: "*.log"
                 }
                 failure {
                     // Send email notification on security scan failure
                     emailext body: "Security Scan Stage: Failure\n\nPlease find attached security scan logs.",
                              subject: "Pipeline Security Scan Status: Failure",
-                             to: ''tonnyanikarahman10@gmail.com’,
+                             to: 'tonnyanikarahman10@gmail.com' ,
                              attachmentsPattern: "*.log"
                 }
             }
